@@ -19,13 +19,8 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-  function iframeLoaded() {
-      var iFrameID = document.getElementById('idIframe');
-      if(iFrameID) {
-            // here you can make the height, I delete it first, then I make it again
-            iFrameID.height = "";
-            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-      }   
+  function resizeIframe(iframe) {
+    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   }
 </script>
 <style type="text/css">
@@ -63,7 +58,7 @@
 	<h2>23 Tokyo Drive. San Diego, CA 22400</h2>
 	<h2>(619) 146-5458</h2>
 </div>
-<iframe id="idIframe" onload="iframeLoaded()" src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec" width="100%"></iframe>
+<iframe onload="resizeIframe(this)" src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec" width="100%"></iframe>
 <div class="text-center footer">
 	<h2>Powered by <a href="https://htswipe.com/">HTSwipe</a> - Payment & Marketing Solutions</h2>
 </div>
