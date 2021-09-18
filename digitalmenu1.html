@@ -53,14 +53,18 @@
 	<h2>23 Tokyo Drive. San Diego, CA 22400</h2>
 	<h2>(619) 146-5458</h2>
 </div>
-<iframe onload="resizeIframe(this)" src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec" width="100%"></iframe>
+<iframe id="myIframe" src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec" width="100%"></iframe>
 <div class="text-center footer">
 	<h2>Powered by <a href="https://htswipe.com/">HTSwipe</a> - Payment & Marketing Solutions</h2>
 </div>
-<script type="text/javascript">
-  function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
+<script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
 </script>
 </body>
 </html>
