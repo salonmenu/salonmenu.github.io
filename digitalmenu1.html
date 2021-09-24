@@ -16,6 +16,9 @@
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
+<!-- iFrame Resizer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js" integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style type="text/css">
@@ -35,15 +38,12 @@
 		background-color: pink;
 		padding: 10px;
 	}
-	p {
-		position: relative;
-		top: 50%;
-		-ms-transform: translateY(-50%);
-  		-webkit-transform: translateY(-50%);
-  		transform: translateY(-50%)
-	}
 	h1, h2 {
-		font-size: 1vw;
+		font-size: 1.5vw;
+	}
+	iframe {
+		width: 100%;
+		min-height: 80%;
 	}
 </style>
 </head>
@@ -53,18 +53,12 @@
 	<h2>23 Tokyo Drive. San Diego, CA 22400</h2>
 	<h2>(619) 146-5458</h2>
 </div>
-<iframe id="myIframe" src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec" height="auto" width="100%"></iframe>
+<iframe src="https://script.google.com/macros/s/AKfycbwGQg1bIF-qcUhoT6ocIGKSl516DUuF0bf6jg2TvirNiAYRgzLZgTou8Rk3El6xQJze/exec"></iframe>
+<script>
+	iFrameResize({log:true, sizeHeight:true});
+</script>
 <div class="text-center footer">
 	<h2>Powered by <a href="https://htswipe.com/">HTSwipe</a> - Payment & Marketing Solutions</h2>
 </div>
-<script>
-    // Selecting the iframe element
-    var iframe = document.getElementById("myIframe");
-    
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-</script>
 </body>
 </html>
